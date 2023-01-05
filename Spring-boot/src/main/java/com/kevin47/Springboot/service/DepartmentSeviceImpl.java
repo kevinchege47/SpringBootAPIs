@@ -4,6 +4,7 @@ import com.kevin47.Springboot.entity.Department;
 import com.kevin47.Springboot.repository.DepartmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.DeleteMapping;
 
 import java.util.List;
 
@@ -26,4 +27,11 @@ public class DepartmentSeviceImpl implements DepartmentService{
     public Department fetchDepartmentById(Long departmentId) {
         return departmentRepository.findById(departmentId).get();
     }
+
+    @Override
+    public void deleteDepartmentById(Long departmentId) {
+         departmentRepository.deleteById(departmentId);
+    }
+
+
 }
