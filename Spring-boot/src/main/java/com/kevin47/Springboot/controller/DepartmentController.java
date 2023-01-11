@@ -14,6 +14,7 @@ import java.util.List;
 
 @RestController
 public class DepartmentController {
+
     @Autowired
     private DepartmentService departmentService;
     private final Logger LOGGER = LoggerFactory.getLogger(DepartmentController.class);
